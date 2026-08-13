@@ -15,7 +15,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/studentlist' element={<StudentList />} />
-        <Route path='/viewprofile' element={<StudentProfile />} />
+        
+        <Route path='/viewprofile/:id' element={<StudentProfile />} />
 
         <Route path='/login' element={<Login />} />
         <Route path="*" element={<NotFound />} />

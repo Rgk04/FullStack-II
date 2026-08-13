@@ -13,23 +13,23 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-      <Route path="/dashboard" element={<Dashboard />} >
-          <Route path='studentlist' element={<StudentList />} >
-            <Route path="profile" element={<StudentProfile />} />
-            </Route>
-    </Route>
+
+        <Route path="/dashboard" element={<Dashboard />} >
+          <Route path='studentlist' element={<StudentList />} />
+          <Route path="profile/:id" element={<StudentProfile />} />
+        </Route>
 
         /* 1./dashboard
         2./dashboard/studentlist
-        3/dashbord/studenlist /profile */
+        3/dashbord/profile */
 
 
         <Route path='/login' element={<Login />} />
-        
+
 
       </Routes>
     </>
-   
+
 
   )
 }

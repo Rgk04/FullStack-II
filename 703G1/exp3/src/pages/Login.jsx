@@ -1,19 +1,37 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 
 function Login() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log(name, value);
+
+    setFormData((prevData) => ({  
+      ...prevData,
+      [name]: value,
+    }));
   
   };
 
   const handleSubmit = (e) => {
+ 
     e.preventDefault();
-    console.log(formData);
-    alert("Login Successful!");
+    if (formData.username === "admin" && formData.password === "admin123") {
+
+      localStorage.setItem("isLoggedIn", "true");
+      window.location.href = "/dashboard";
+
+    }
+    else {
+      alert("Invalid username or password");
+    }
+ 
   };
 
   const styles = {

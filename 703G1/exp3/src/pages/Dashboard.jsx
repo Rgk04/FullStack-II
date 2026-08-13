@@ -114,6 +114,7 @@ function Dashboard() {
       `}</style>
 
       <div className="dashboard">
+        
         <h1 className="title">📊 Student Dashboard</h1>
         <p className="subtitle">Manage students and monitor statistics.</p>
 
